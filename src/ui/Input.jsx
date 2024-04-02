@@ -1,4 +1,4 @@
-import { string, any } from "prop-types";
+import { string, any, node } from "prop-types";
 
 import { twMerge } from "tailwind-merge";
 
@@ -9,7 +9,9 @@ Input.propTypes = {
   errorMessage: string,
   inputStyle: string,
   labelStyle: string,
-  options: any
+  options: any,
+  children: node,
+  className:string
 };
 export default function Input({
   labelText = "Label Text",
@@ -18,10 +20,12 @@ export default function Input({
   errorMessage,
   inputStyle,
   labelStyle,
-  options
+  className,
+  options,
+  children,
 }) {
   return (
-    <div className="relative flex flex-col">
+    <div className={twMerge("relative flex flex-col", className)}>
       <label
         htmlFor={id}
         className={twMerge(
@@ -41,6 +45,7 @@ export default function Input({
         name={name}
         {...options}
       />
+      {children}
     </div>
   );
 }

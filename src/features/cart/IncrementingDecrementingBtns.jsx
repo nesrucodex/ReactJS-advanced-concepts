@@ -7,7 +7,7 @@ const IncrementingDecrementingBtns = ({ cartId }) => {
     (state) => state.cart.carts.find((cart) => cart.id === cartId).quantity,
   );
   return (
-    <div className="flex select-none items-center gap-3">
+    <div className="flex select-none items-center gap-3 md:gap-5">
       <span
         className="grid size-[2rem] place-items-center rounded-full bg-green-400"
         onClick={() => dispatch(increaseCartQuantity(cartId))}

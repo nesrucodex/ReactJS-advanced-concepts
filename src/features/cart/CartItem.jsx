@@ -28,7 +28,7 @@ const CartItem = ({ cart }) => {
             currency: "ETB",
           }).format(cart.price * cart.quantity)}
         </p>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 md:gap-5">
           <IncrementingDecrementingBtns cartId={cart.id} />
           <span className="grid size-[2rem] place-items-center rounded-full bg-red-400">
             <FaTimes

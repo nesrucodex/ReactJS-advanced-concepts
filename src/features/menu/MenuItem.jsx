@@ -62,6 +62,7 @@ export function MenuItemDemo({ menu }) {
           </p>
           {!carts.map((cart) => cart.id).includes(menu.id) && (
             <Button
+            className="rounded-full"
               options={{
                 onClick: () => {
                   dispatch(addCart(menu));
@@ -72,7 +73,7 @@ export function MenuItemDemo({ menu }) {
             </Button>
           )}
           {carts.map((cart) => cart.id).includes(menu.id) && (
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 md:gap-5">
               <IncrementingDecrementingBtns cartId={menu.id} />
               <span className="grid size-[2rem] place-items-center rounded-full bg-red-400">
                 <FaTimes

@@ -23,13 +23,13 @@ const AppLayout = () => {
 
         <Outlet />
       </main>
-      <footer className=" mt-auto flex h-footer items-center justify-between bg-black/80 px-4 py-1">
+      <footer className=" mt-auto flex h-footer items-center justify-between bg-black/80 pr-0 pl-3">
         <p className="flex h-full items-center justify-center gap-2 text-sm text-white/80">
           <span className="text-red-400"> @copy</span>
           <span>F@Pizza.co is Nesredin&apos;s Company.</span>
         </p>
         <button
-          className="rounded-sm bg-orange-500 px-4 py-2 text-sm font-medium  uppercase tracking-wide text-orange-50"
+          className="rounded-sm bg-orange-500 px-4 py-2.5 text-sm font-medium  uppercase tracking-wide text-orange-50"
           onClick={() => navigate("/cart")}
         >
           My Cart &rarr;
