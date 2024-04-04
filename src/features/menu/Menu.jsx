@@ -10,6 +10,7 @@ import { addMenus } from "./menuSlice";
 
 const Menu = () => {
   const menus = useSelector((state) => state.menu.menus);
+  console.log("🚀 ~ Menu ~ menus:", menus);
 
   if (menus.length > 0)
     return (
@@ -34,22 +35,23 @@ export async function loader() {
   await new Promise((resolve) => {
     setTimeout(() => {
       resolve();
-    }, 1000);
+    }, 500);
   });
 
   try {
     const data = await getMenus();
     return data;
   } catch (error) {
-    const response = Array.from({ length: 5 }, () => ({
+    const response = Array.from({ length: 10 }, () => ({
       id: faker.database.mongodbObjectId(),
       title: `${faker.hacker.adjective()} ${faker.hacker.noun()} `,
       price: Math.round(Math.random() * 450) + 200,
       description: faker.hacker.phrase().repeat(2),
     }));
 
-    store.dispatch(addMenus(response));
-    return response;
+    if (store.getState().menu.menus.length === 0)
+      store.dispatch(addMenus(response));
+    return store.getState().menu.menus;
   }
 }
 
