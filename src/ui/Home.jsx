@@ -24,7 +24,7 @@ const Home = () => {
           Welcome to our fast pizza
         </h1>
         {name === "" && (
-          <h2 className="text-lg text-stone-700 md:text-xl lg:text-2xl">
+          <h2 className="text-stone-700 opacity-70 lg:text-lg">
             Start ordering our pizza by typing your name first?
           </h2>
         )}
@@ -36,7 +36,7 @@ const Home = () => {
               errorMessage={data?.error}
               id="name"
               name="name"
-              inputStyle="py-3.5 rounded-full pl-4"
+              inputStyle="py-3 rounded-md pl-4 border border-[.12rem]"
               labelStyle="left-2 text-orange-500"
               options={{
                 onChange: () => {
@@ -50,7 +50,7 @@ const Home = () => {
 
         {name !== "" && (
           <button
-            className="mt-7 rounded-full bg-orange-500 px-7 py-3 font-semibold uppercase tracking-wide text-orange-50 transition-all duration-200 hover:animate-none hover:bg-orange-500/90 active:bg-orange-500"
+            className="mt-7 rounded-md bg-orange-500 px-7 py-3 font-semibold uppercase tracking-wide text-sm text-orange-50 transition-all duration-200 hover:animate-none hover:bg-orange-500/90 active:bg-orange-500"
             onClick={() => {
               navigate("/menu");
             }}
@@ -69,7 +69,7 @@ const Home = () => {
               duration: 1,
               type: "tween",
             }}
-            className="mt-10 rounded-full bg-orange-500 px-12 py-5 text-lg font-semibold uppercase tracking-wide text-orange-50 transition-all duration-200 hover:animate-none hover:bg-orange-500/90 active:bg-orange-500"
+            className="mt-10 rounded-md bg-orange-500 px-7 py-3.5 text-sm font-semibold uppercase tracking-wide text-orange-50 transition-all duration-200 hover:animate-none hover:bg-orange-500/90 active:bg-orange-500"
             onClick={() => {
               if (!data?.name) return;
 

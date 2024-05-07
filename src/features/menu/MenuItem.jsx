@@ -62,7 +62,7 @@ export function MenuItemDemo({ menu }) {
           </p>
           {!carts.map((cart) => cart.id).includes(menu.id) && (
             <Button
-            className="rounded-full"
+              className="rounded-sm text-xs"
               options={{
                 onClick: () => {
                   dispatch(addCart(menu));
@@ -75,9 +75,9 @@ export function MenuItemDemo({ menu }) {
           {carts.map((cart) => cart.id).includes(menu.id) && (
             <div className="flex items-center gap-3 md:gap-5">
               <IncrementingDecrementingBtns cartId={menu.id} />
-              <span className="grid size-[2rem] place-items-center rounded-full bg-red-400">
+              <span className="grid size-[1.7rem] place-items-center rounded-full bg-red-400">
                 <FaTimes
-                  className="cursor-pointer text-lg text-white transition-all duration-200 hover:scale-110 active:scale-100 md:text-xl "
+                  className="cursor-pointer text-white transition-all duration-200 hover:scale-105 active:scale-100 "
                   onClick={() => dispatch(removeCart(menu.id))}
                 />
               </span>

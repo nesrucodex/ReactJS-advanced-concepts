@@ -40,7 +40,7 @@ const Navbar = () => {
             to="/cart"
           >
             Cart
-            <span className="text-orange-500 italic">({cartCount})</span>
+            <span className="text-orange-500">[{cartCount}]</span>
           </NavLink>
         </li>
         <li>

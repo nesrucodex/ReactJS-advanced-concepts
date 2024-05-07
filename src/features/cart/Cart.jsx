@@ -54,7 +54,7 @@ const Cart = () => {
                   navigate("/order/new");
                 },
               }}
-              className="rounded-full"
+              className="rounded-sm"
             >
               Order now
             </Button>
@@ -64,7 +64,7 @@ const Cart = () => {
                   dispatch(clearCarts());
                 },
               }}
-              className="rounded-full bg-stone-200 text-stone-500 hover:bg-stone-300 hover:text-stone-700 focus:ring-stone-300"
+              className="rounded-sm bg-stone-200 text-stone-500 hover:bg-stone-300 hover:text-stone-700 focus:ring-stone-300"
             >
               Clear orders
             </Button>

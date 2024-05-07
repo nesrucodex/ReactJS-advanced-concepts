@@ -29,7 +29,7 @@ export default function Input({
       <label
         htmlFor={id}
         className={twMerge(
-          `absolute -top-3 left-1 z-10 ${errorMessage ? "bg-red-50 text-red-500" : "bg-stone-50 text-stone-600"}  px-1 text-xs font-medium uppercase tracking-wide sm:text-sm `,
+          `absolute -top-1 left-1 z-10 text-[.65rem] ${errorMessage ? "bg-red-50 text-red-500" : "bg-stone-50 text-stone-600"}  px-1  font-medium uppercase tracking-wide  `,
           labelStyle,
         )}
       >

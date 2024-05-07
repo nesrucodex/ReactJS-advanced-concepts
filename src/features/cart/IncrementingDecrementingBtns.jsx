@@ -9,19 +9,19 @@ const IncrementingDecrementingBtns = ({ cartId }) => {
   return (
     <div className="flex select-none items-center gap-3 md:gap-5">
       <span
-        className="grid size-[2rem] place-items-center rounded-full bg-green-400"
+        className="grid size-[1.7rem] place-items-center rounded-full bg-green-400"
         onClick={() => dispatch(increaseCartQuantity(cartId))}
       >
-        <FaPlus className="cursor-pointer text-lg text-white transition-all duration-200 hover:scale-110 active:scale-100 md:text-xl " />
+        <FaPlus className="cursor-pointer text-white transition-all duration-200 hover:scale-105 active:scale-100  " />
       </span>
-      <span className="grid size-[2rem] place-items-center  rounded-full font-medium text-stone-700 ring ring-sky-400">
+      <span className="grid size-[1.7rem] place-items-center  rounded-full font-medium text-stone-700 ring ring-sky-400">
         {quantity}
       </span>
       <span
-        className="grid size-[2rem] place-items-center rounded-full bg-yellow-400"
+        className="grid size-[1.7rem] place-items-center rounded-full bg-yellow-400"
         onClick={() => dispatch(decreaseCartQuantity(cartId))}
       >
-        <FaMinus className="cursor-pointer text-lg text-white transition-all duration-200 hover:scale-110 active:scale-100 md:text-xl " />
+        <FaMinus className="cursor-pointer text-white transition-all duration-200 hover:scale-110 active:scale-100 " />
       </span>
     </div>
   );

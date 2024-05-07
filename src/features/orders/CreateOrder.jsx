@@ -28,6 +28,7 @@ const CreateOrder = () => {
 
       <Form method="POST" className="flex flex-col gap-6 px-3">
         <Input
+        inputStyle={"border text-sm h-12"}
           id="name"
           name="name"
           labelText="User name"
@@ -35,28 +36,25 @@ const CreateOrder = () => {
           options={{ defaultValue: userName }}
         />
         <Input
+        inputStyle={"border text-sm h-12"}
           id="phone"
           name="phone"
           labelText="User Phone"
           errorMessage={errorData?.phone}
         />
         <Input
+        inputStyle={"border text-sm h-12 relative"}
           id="address"
           name="address"
-          className="relative"
+         
           labelText="User address"
           errorMessage={errorData?.address}
         >
           <input type="hidden" value={JSON.stringify(carts)} name="carts" />
-          <button
-            className="acitve:bg-orange-500 absolute right-0 top-0 z-10 bg-orange-500 px-5 py-2 font-medium text-orange-50 drop-shadow-sm transition-all duration-200 hover:bg-orange-500/90"
-            type="button"
-          >
-            Get GPS Address
-          </button>
+         
         </Input>
 
-        <Button className="mt-5">Order now</Button>
+        <Button className="mt-5 self-end px-7">Order now</Button>
       </Form>
     </div>
   );
